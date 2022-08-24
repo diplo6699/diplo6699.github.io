@@ -8,6 +8,9 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
 
+    <!-- Animasi AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -51,7 +54,7 @@
     <section class="jumbotron text-center">
       <img src="img/6.jpg" alt="fotoprofil" width="200" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Diplo</h1>
-      <p class="lead">FrontEnd Dev | S1-Sistem Informasi</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -73,10 +76,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla, recusandae libero. Numquam quisquam officiis earum mollitia possimus. Debitis, ad vero.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos sapiente velit atque debitis consectetur quod rem maiores nam illum reiciendis. Facilis alias architecto necessitatibus hic sit iusto corporis dicta harum!</p>
           </div>
         </div>
@@ -102,7 +105,7 @@
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000">
             <div class="card">
               <img src="img/1.jpg" class="card-img-top" alt="image1" />
               <div class="card-body">
@@ -110,7 +113,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
             <div class="card">
               <img src="img/2.jpg" class="card-img-top" alt="image2" />
               <div class="card-body">
@@ -118,7 +121,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
             <div class="card">
               <img src="img/3.jpg" class="card-img-top" alt="image3" />
               <div class="card-body">
@@ -126,7 +129,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
             <div class="card">
               <img src="img/4.jpg" class="card-img-top" alt="image4" />
               <div class="card-body">
@@ -134,7 +137,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-4 mb-3">
+          <div class="col-md-4 mb-3" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
             <div class="card">
               <img src="img/5.jpg" class="card-img-top" alt="image5" />
               <div class="card-body">
@@ -212,6 +215,26 @@
     <!-- Akhir Footer -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Script animasi AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- script animasi GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/TextPlugin.min.js"></script>
+
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to(".lead", { duration: 1.5, delay: 1.5, text: "FrontEnd Dev | S1-Sistem Informasi" });
+      gsap.from(".jumbotron img", { duration: 1.5, rotateY: 360, opacity: 0 });
+      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+    </script>
+
+    <!--  -->
 
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbxXO1MTm-Wtrzorpmf5DVJ8BTMxN0TZvx120M11mSCLM79kmWxJWFMJdRmuz4WFUhQv/exec";

@@ -11,6 +11,9 @@
     <!-- Animasi AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
+    <!-- Animate -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -53,7 +56,7 @@
 
     <section class="jumbotron text-center">
       <img src="img/6.jpg" alt="fotoprofil" width="200" class="rounded-circle img-thumbnail" />
-      <h1 class="display-4">Diplo</h1>
+      <h1 class="display-4 animate__animated animate__bounceInDown animate__slow">Diplo</h1>
       <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
@@ -229,9 +232,9 @@
 
     <script>
       gsap.registerPlugin(TextPlugin);
-      gsap.to(".lead", { duration: 1.5, delay: 1.5, text: "FrontEnd Dev | S1-Sistem Informasi" });
       gsap.from(".jumbotron img", { duration: 1.5, rotateY: 360, opacity: 0 });
-      gsap.from(".display-4", { duration: 1, x: -50, opacity: 0, delay: 0.5, ease: "back" });
+      // gsap.from(".display-4", { duration: 1, x: -10, opacity: 0, delay: 0.5, ease: "back" });
+      gsap.to(".lead", { duration: 1.5, delay: 1.5, text: "FrontEnd Dev | S1-Sistem Informasi" });
     </script>
 
     <!--  -->

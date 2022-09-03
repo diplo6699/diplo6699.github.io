@@ -268,5 +268,10 @@
           .catch((error) => console.error("Error!", error.message));
       });
     </script>
-  </body>
+    <script>
+      const myCollapsible = document.querySelector('.collapse')
+      myCollapsible.addEventListener('click', function () {
+        myCollapsible.classList.replace('show','hide');
+      });
+    </script>
 </html>
